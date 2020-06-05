@@ -1,0 +1,15 @@
+Package: VideoR
+Type: Package
+Title: Simplifies data pull for YouTube and Brightcove Content
+Version: 0.1.0
+Author: Jake Davis
+Maintainer: Jake Davis <jacobrdavis95@gmail.com>
+Description: This package contains customized API wrappers for common tools we use
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports:
+    httr,
+    jsonlite,
+    tidyverse
+RoxygenNote: 7.1.0
