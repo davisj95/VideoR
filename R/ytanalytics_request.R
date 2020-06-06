@@ -7,7 +7,7 @@
 #' @param metrics character string
 #' @param sort character string
 #' @param maxResults numeric
-#' @param filter character string
+#' @param filtr character string
 #' @param startDate character string
 #' @param endDate character string
 #' @param token environment

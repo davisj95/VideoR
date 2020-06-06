@@ -24,13 +24,13 @@ ytanalytics_request(
 
 \item{maxResults}{numeric}
 
+\item{filtr}{character string}
+
 \item{startDate}{character string}
 
 \item{endDate}{character string}
 
 \item{token}{environment}
-
-\item{filtr}{character string}
 }
 \value{
 df data.frame
