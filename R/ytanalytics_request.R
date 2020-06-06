@@ -31,7 +31,7 @@ ytanalytics_request <- function(dimensions = NULL, metrics, sort, maxResults = 1
                 "&startDate=", startDate,
                 "&endDate=", endDate)
   if(!is.null(filtr)) {
-    url <- paste0(url, "&filter=", filtr)
+    url <- paste0(url, "&filters=", filtr)
   }
   if(!is.null(dimensions)) {
     url <-paste0(url,"&dimensions=", dimensions)
