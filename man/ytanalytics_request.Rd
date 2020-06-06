@@ -30,7 +30,7 @@ ytanalytics_request(
 
 \item{token}{environment}
 
-\item{filter}{character string}
+\item{filtr}{character string}
 }
 \value{
 df data.frame
