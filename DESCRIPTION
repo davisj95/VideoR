@@ -1,7 +1,7 @@
 Package: VideoR
 Type: Package
 Title: Simplifies data pull for YouTube and Brightcove Content
-Version: 0.1.01
+Version: 0.1.2
 Author: Jake Davis
 Maintainer: Jake Davis <jacobrdavis95@gmail.com>
 Description: This package contains customized API wrappers for common tools we use
