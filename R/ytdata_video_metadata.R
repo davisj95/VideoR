@@ -33,7 +33,7 @@ ytdata_video_metadata <- function(ids = NULL, token = NULL) {
         temp <- temp$items$snippet %>%
           select(-thumbnails, -localized) %>%
           mutate(video = ids[i])
-        df <- bind_rows(df, fin)
+        df <- bind_rows(df, temp)
       }
     }
   }
