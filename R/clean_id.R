@@ -15,6 +15,7 @@
 clean_id <- function(ids){
   ids <- ids %>%
     na.omit(.) %>%
-    trimws(.)
+    trimws(.) %>%
+    unique(.)
   return(ids)
 }
