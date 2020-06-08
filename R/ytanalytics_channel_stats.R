@@ -22,7 +22,6 @@ ytanalytics_channel_stats <- function(token = NULL, startDate = Sys.Date() - 30,
   met <- "views,shares,likes,dislikes,comments,subscribersGained,subscribersLost"
   sort <- "-views"
 
-  df <- ytanalytics_request(NULL, met, sort, maxResults = maxResults,
-                            startDate = startDate, endDate = endDate, token = token)
+  df <- ytanalytics_request(NULL, met, sort, startDate = startDate, endDate = endDate, token = token)
   return(df)
 }
