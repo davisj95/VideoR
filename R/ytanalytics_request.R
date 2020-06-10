@@ -24,7 +24,7 @@ ytanalytics_request <- function(dimensions = NULL, metrics, sort, maxResults = 1
                                 startDate = Sys.Date() - 30, endDate = Sys.Date(), token, channelId = "MINE") {
 
   url <- paste0("https://youtubeanalytics.googleapis.com/v2/reports?",
-                "&ids=channel%3D%3D", channelID,
+                "&ids=channel%3D%3D", channelId,
                 "&metrics=", metrics,
                 "&sort=", sort,
                 "&maxResults=", maxResults,
