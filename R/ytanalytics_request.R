@@ -11,11 +11,12 @@
 #' @param startDate character string
 #' @param endDate character string
 #' @param token environment
+#' @param channelId character string
 #'
 #' @return df data.frame
 #'
 #' @examples
-#' ytanalytics_request("video", "views", "-views", 10, NULL, "2020-05-01", 2020-05-31, token_var)
+#' ytanalytics_request("video", "views", "-views", 10, NULL, "2020-05-01", 2020-05-31, token_var, "MINE")
 #'
 #' @export
 #'
