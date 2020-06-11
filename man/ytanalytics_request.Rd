@@ -12,7 +12,8 @@ ytanalytics_request(
   filtr = NULL,
   startDate = Sys.Date() - 30,
   endDate = Sys.Date(),
-  token
+  token,
+  channelId = "MINE"
 )
 }
 \arguments{
@@ -31,6 +32,8 @@ ytanalytics_request(
 \item{endDate}{character string}
 
 \item{token}{environment}
+
+\item{channelId}{character string}
 }
 \value{
 df data.frame
@@ -40,6 +43,6 @@ This function is an API helper function for pulling
 YT Analytics data on your own channel
 }
 \examples{
-ytanalytics_request("video", "views", "-views", 10, NULL, "2020-05-01", 2020-05-31, token_var)
+ytanalytics_request("video", "views", "-views", 10, NULL, "2020-05-01", 2020-05-31, token_var, "MINE")
 
 }

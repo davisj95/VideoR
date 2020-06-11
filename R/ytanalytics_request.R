@@ -39,7 +39,9 @@ ytanalytics_request <- function(dimensions = NULL, metrics, sort, maxResults = 1
   }
 
   r <- get_req(url, token)
-  df <- as.data.frame(r$rows)
-  colnames(df) <- r$columnHeaders$name
-  return(df)
+  if(length(r$rows) > 0){
+    df <- as.data.frame(r$rows)
+    colnames(df) <- r$columnHeaders$name
+    return(df)
+  }
 }
