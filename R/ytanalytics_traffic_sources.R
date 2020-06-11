@@ -24,7 +24,7 @@ ytanalytics_traffic_sources <- function(token, maxResults = 10,
   met <- "views"
   sor <- "-views"
 
-  df <- ytanalytics_request(dim, met, sort, maxResults = maxResults,
+  df <- ytanalytics_request(dim, met, sor, maxResults = maxResults,
                             startDate = startDate, endDate = endDate, token = token)
   return(df)
 }

@@ -24,7 +24,7 @@ ytanalytics_sharing_service <- function(token = NULL, maxResults = 10,
   met <- "shares"
   sor <- "-shares"
 
-  df <- ytanalytics_request(dim, met, sort, maxResults = maxResults,
+  df <- ytanalytics_request(dim, met, sor, maxResults = maxResults,
                             startDate = startDate, endDate = endDate, token = token)
   return(df)
 }
