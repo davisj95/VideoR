@@ -16,7 +16,7 @@
 #' @export
 #'
 
-ytanalytics_top_videos <- function(token = NULL, maxResults = 10,
+ytanalytics_top_videos <- function(token = NULL, maxResults = 10, channelId = "MINE",
                                    startDate = Sys.Date() - 30, endDate = Sys.Date()) {
 
   if(is.null(token)) stop("A token is required to get stats")
@@ -25,8 +25,8 @@ ytanalytics_top_videos <- function(token = NULL, maxResults = 10,
   met <- "views,averageViewDuration,shares,likes,dislikes,comments,subscribersGained,subscribersLost"
   sor <- "-views"
 
-  df <- ytanalytics_request(dim, met, sort, maxResults = maxResults,
-                            startDate = startDate, endDate = endDate, token = token)
+  df <- ytanalytics_request(dim, met, sort, maxResults = maxResults, startDate = startDate,
+                            endDate = endDate, token = token)
 
   temp <- ytdata_video_metadata(df$video, token)
 
