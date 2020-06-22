@@ -16,7 +16,7 @@
 #' @export
 #'
 
-ytanalytics_top_videos <- function(token = NULL, maxResults = 10, channelId = "MINE",
+ytanalytics_top_videos <- function(token = NULL, maxResults = 10,
                                    startDate = Sys.Date() - 30, endDate = Sys.Date()) {
 
   if(is.null(token)) stop("A token is required to get stats")
@@ -29,6 +29,7 @@ ytanalytics_top_videos <- function(token = NULL, maxResults = 10, channelId = "M
                             endDate = endDate, token = token)
 
   temp <- ytdata_video_metadata(df$video, token)
+  print("Top Vids Pulled")
 
   titles <- character()
   for(i in df$video){
@@ -37,5 +38,6 @@ ytanalytics_top_videos <- function(token = NULL, maxResults = 10, channelId = "M
     titles <- c(titles,rList$items$snippet$title)
   }
   df$title <- titles
+  print("Vid details pulled")
   return(df)
 }
