@@ -21,22 +21,18 @@
 #' @export
 #'
 
-ytanalytics_request <- function(dimensions = NULL, metrics, sort, maxResults = 10, filtr = NULL,
-                                startDate = Sys.Date() - 30, endDate = Sys.Date(), token, channelId = "MINE") {
+ytanalytics_request <- function(dimensions = NULL, metrics = NULL, sort = NULL,
+                                maxResults = NULL, filtr = NULL, startDate = Sys.Date() - 30,
+                                endDate = Sys.Date(), token) {
 
-  url <- paste0("https://youtubeanalytics.googleapis.com/v2/reports?",
-                "&ids=channel%3D%3D", channelId,
-                "&metrics=", metrics,
-                "&sort=", sort,
-                "&maxResults=", maxResults,
-                "&startDate=", startDate,
-                "&endDate=", endDate)
-  if(!is.null(filtr)) {
-    url <- paste0(url, "&filters=", filtr)
-  }
-  if(!is.null(dimensions)) {
-    url <-paste0(url,"&dimensions=", dimensions)
-  }
+  url <- paste0("https://youtubeanalytics.googleapis.com/v2/reports?&ids=channel%3D%3DMINE",
+                "&startDate=", startDate, "&endDate=", endDate)
+
+  if(!is.null(dimensions)) url <- paste0(url, "&dimensions=", dimensions)
+  if(!is.null(metrics)) url <- paste0(url, "&metrics=", metrics)
+  if(!is.null(sort)) url <- paste0(url, "&sort=", sort)
+  if(!is.null(maxResults)) url <- paste0(url, "&maxResults=", maxResults)
+  if(!is.null(filtr)) url <- paste0(url, "&filters=", filtr)
 
   r <- get_req(url, token)
   if(length(r$rows) > 0){
