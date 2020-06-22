@@ -25,7 +25,7 @@ ytanalytics_top_videos <- function(token = NULL, maxResults = 10, channelId = "M
   met <- "views,averageViewDuration,shares,likes,dislikes,comments,subscribersGained,subscribersLost"
   sor <- "-views"
 
-  df <- ytanalytics_request(dim, met, sort, maxResults = maxResults, startDate = startDate,
+  df <- ytanalytics_request(dim, met, sor, maxResults = maxResults, startDate = startDate,
                             endDate = endDate, token = token)
 
   temp <- ytdata_video_metadata(df$video, token)
